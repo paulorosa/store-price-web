@@ -91,17 +91,5 @@
 		</plugins>
 	</build>
 
-<<<<<<< HEAD
-=======
-    <!-- Spring Snapshot repository for Spring Cloud GCP Cloud SQL Starter 
-    <repositories>
-        <repository>
-            <id>repository.spring.snapshot</id>
-            <name>Spring Snapshot Repository</name>
-            <url>http://repo.spring.io/snapshot</url>
-        </repository>
-    </repositories>
--->
 
->>>>>>> 062dabe00b5444ec728cbe90971b35ef697d32d5
 </project>

@@ -33,10 +33,6 @@
             <scope>provided</scope>
         </dependency>
         
-<<<<<<< HEAD
-        
-
-=======
         <!--
         <dependency>
 		    <groupId>org.springframework.cloud</groupId>
@@ -45,7 +41,6 @@
 		</dependency>
 -->
         
->>>>>>> 062dabe00b5444ec728cbe90971b35ef697d32d5
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>

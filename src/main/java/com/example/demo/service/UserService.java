@@ -2,14 +2,18 @@ package com.example.demo.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Optional;
+
+import com.example.demo.entity.User;
+import com.example.demo.repository.UserRepository;
 
 @Service
 public class UserService {
     
     @Autowired
-    private UserRespository repository;
+    private UserRepository repository;
 
     public Iterable<User> findAll() {
         return repository.findAll();
@@ -20,10 +24,10 @@ public class UserService {
     }
 
     public User save(User user) {
-        return respository.save(user);
+        return repository.save(user);
     }
 
     public void deleteById(Long id) {
-        respository.deleteById(id);
+        repository.deleteById(id);
     }
 }

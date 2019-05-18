@@ -2,25 +2,29 @@ package com.example.demo.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Optional;
+
+import com.example.demo.entity.Product;
+import com.example.demo.repository.ProductRepository;
 
 @Service
 public class ProductService {
     
     @Autowired
-    private UserRespository repository;
+    private ProductRepository repository;
 
-    public Iterable<User> findAll() {
+    public List<Product> findAll() {
         return repository.findAll();
     }
 
-    public Optional<User> findById(Long id) {
+    public Optional<Product> findById(Long id) {
         return repository.findById(id);
     }
 
-    public User save(User user) {
-        return respository.save(user);
+    public Product save(Product product) {
+        return respository.save(product);
     }
 
     public void deleteById(Long id) {

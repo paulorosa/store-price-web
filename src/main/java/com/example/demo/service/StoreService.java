@@ -3,7 +3,7 @@ package com.example.demo.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+
 import java.util.Optional;
 
 @Service
@@ -12,7 +12,7 @@ public class UserService {
     @Autowired
     private UserRespository repository;
 
-    public List<User> findAll() {
+    public Iterable<User> findAll() {
         return repository.findAll();
     }
 

@@ -34,11 +34,6 @@
         </dependency>
         
         
-        <dependency>
-		    <groupId>org.springframework.cloud</groupId>
-    		<artifactId>spring-cloud-gcp-starter-sql</artifactId>
-		    <version>1.1.1.RELEASE</version>
-		</dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -89,14 +84,5 @@
             </plugin>
 		</plugins>
 	</build>
-
-    <!-- Spring Snapshot repository for Spring Cloud GCP Cloud SQL Starter -->
-    <repositories>
-        <repository>
-            <id>repository.spring.snapshot</id>
-            <name>Spring Snapshot Repository</name>
-            <url>http://repo.spring.io/snapshot</url>
-        </repository>
-    </repositories>
 
 </project>

@@ -15,11 +15,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class UserController {
 
     @Autowired
-    private UserRepository userRepository;
+    private UserRepository repository;
 
     @GetMapping("/users")
     public List<User> getUsers() {
-        return (List<User>) userRepository.findAll();
+        return (List<User>) repository.findAll();
     }
     
     @GetMapping(path = "/findAll")
@@ -28,26 +28,7 @@ public class UserController {
 
         StringBuffer retBuf = new StringBuffer();
 
-        List<UserAccount> userAccountList = (List<UserAccount>) userAccountRepository.findAll();
-
-        if (userAccountList != null) {
-            for (UserAccount userAccount : userAccountList) {
-                retBuf.append("user name = ");
-                retBuf.append(userAccount.getUsername());
-                retBuf.append(", password = ");
-                retBuf.append(userAccount.getPassword());
-                retBuf.append(", email = ");
-                retBuf.append(userAccount.getEmail());
-                retBuf.append("\r\n");
-            }
-        }
-
-        if (retBuf.length() == 0) {
-            retBuf.append("No record find.");
-        } else {
-            retBuf.insert(0, "<pre>");
-            retBuf.append("</pre>");
-        }
+        List<User> userList = (List<User>) repository.findAll();
 
         return retBuf.toString();
     }

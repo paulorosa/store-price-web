@@ -16,7 +16,7 @@ public class StoreService {
     @Autowired
     private StoreRepository repository;
 
-    public Iterable<User> findAll() {
+    public Iterable<Store> findAll() {
         return repository.findAll();
     }
 

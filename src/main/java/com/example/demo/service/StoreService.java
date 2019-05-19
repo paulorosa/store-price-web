@@ -25,10 +25,10 @@ public class StoreService {
     }
 
     public Store save(Store store) {
-        return respository.save(store);
+        return repository.save(store);
     }
 
     public void deleteById(Long id) {
-        respository.deleteById(id);
+        repository.deleteById(id);
     }
 }

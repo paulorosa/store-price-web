@@ -24,10 +24,10 @@ public class ProductService {
     }
 
     public Product save(Product product) {
-        return respository.save(product);
+        return repository.save(product);
     }
 
     public void deleteById(Long id) {
-        respository.deleteById(id);
+        repository.deleteById(id);
     }
 }

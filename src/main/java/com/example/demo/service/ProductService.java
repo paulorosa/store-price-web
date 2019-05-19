@@ -15,7 +15,7 @@ public class ProductService {
     @Autowired
     private ProductRepository repository;
 
-    public List<Product> findAll() {
+    public Iterable<Product> findAll() {
         return repository.findAll();
     }
 
